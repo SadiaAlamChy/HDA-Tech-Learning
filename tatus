@@ -1,0 +1,83 @@
+[33mcommit 190f11c408377435b7224f318f46f345bbc091aa[m[33m ([m[1;36mHEAD -> [m[1;32mi22b0006s14[m[33m, [m[1;31morigin/i22b0006s14[m[33m)[m
+Author: smnnayan <smnoyan99@gmail.com>
+Date:   Sun Feb 13 11:47:54 2022 +0600
+
+    Data Load into Ecomdb Data base
+
+[33mcommit 8aa7eac605f4556f7e3d4fd327498ca7010703cd[m
+Author: smnnayan <smnoyan99@gmail.com>
+Date:   Wed Feb 9 00:23:11 2022 +0600
+
+    Data load with python
+
+[33mcommit e61a7bb21375f5c03be740d1ce72559e5b77b500[m
+Author: smnnayan <smnoyan99@gmail.com>
+Date:   Tue Feb 8 12:52:48 2022 +0600
+
+    Change in i22b0006s14
+
+[33mcommit b3187502c4cc02cfc7ff5bf040905c7586c1c595[m
+Author: smnnayan <smnoyan99@gmail.com>
+Date:   Tue Feb 8 12:45:02 2022 +0600
+
+    .gitignore modified
+
+[33mcommit aed866e62e4471333a38db751f9d0b99167b14b9[m[33m ([m[1;32mmaster[m[33m)[m
+Author: smnnayan <smnoyan99@gmail.com>
+Date:   Tue Feb 8 12:25:19 2022 +0600
+
+    A simple cHANGE
+
+[33mcommit edaf071714de98acab5269a4ea6947c99d53828e[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/i22b0006s07[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: RaihanSabique <htraihan@gmail.com>
+Date:   Mon Feb 7 16:09:19 2022 +0600
+
+    fetching data
+
+[33mcommit caf37ecaac175bd35aa2371f12e172b463df9d6c[m
+Author: RaihanSabique <htraihan@gmail.com>
+Date:   Mon Feb 7 16:00:53 2022 +0600
+
+    excle to ecomdb table sample
+
+[33mcommit 3d6ca3a40f4ac0bfcbc10012648f0012c047df93[m
+Author: RaihanSabique <htraihan@gmail.com>
+Date:   Sun Feb 6 10:25:02 2022 +0600
+
+    e-commerce data loading using notebook
+
+[33mcommit bb526e37656f610803ab6482f4e7713d4030ab9b[m
+Author: RaihanSabique <htraihan@gmail.com>
+Date:   Sun Feb 6 09:46:21 2022 +0600
+
+    Dev branch alter
+
+[33mcommit 4160e3aed5d3bb4989d85f2713b9644392eafed3[m[33m ([m[1;31morigin/dev[m[33m)[m
+Author: RaihanSabique <htraihan@gmail.com>
+Date:   Sun Feb 6 09:41:05 2022 +0600
+
+    Change in dev branch
+
+[33mcommit b40eac46da8980178bb2f9f08cd325defe0c8922[m
+Author: RaihanSabique <htraihan@gmail.com>
+Date:   Sun Feb 6 09:37:57 2022 +0600
+
+    .gitignore added
+
+[33mcommit 85ff9d413740def5174297b0f022f3226109351a[m
+Author: RaihanSabique <htraihan@gmail.com>
+Date:   Sun Feb 6 09:31:27 2022 +0600
+
+    a simple change
+
+[33mcommit c163ee75718721d3a62f87f52b9d8c8fec69e20c[m[33m ([m[1;31morigin/i22b0006s02[m[33m)[m
+Author: RaihanSabique <htraihan@gmail.com>
+Date:   Wed Feb 2 07:46:29 2022 +0600
+
+    test file added for dir structure
+
+[33mcommit 57570905621a5dfe57cab7ba185a043b891ee772[m
+Author: RaihanSabique <htraihan@gmail.com>
+Date:   Wed Feb 2 07:40:06 2022 +0600
+
+    Structure and instructions
