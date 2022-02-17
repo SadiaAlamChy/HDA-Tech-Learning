@@ -1,0 +1,59 @@
+[33mcommit d056d29027984ad402c4928c931579c4df81dc3a[m[33m ([m[1;36mHEAD -> [m[1;32mi22b0006s10[m[33m, [m[1;31morigin/i22b0006s10[m[33m)[m
+Author: dragontea72 <riyadcseiiuc72@gmail.com>
+Date:   Fri Feb 11 01:28:31 2022 +0600
+
+    etl 2nd task
+
+[33mcommit edaf071714de98acab5269a4ea6947c99d53828e[m[33m ([m[1;32mmaster[m[33m)[m
+Author: RaihanSabique <htraihan@gmail.com>
+Date:   Mon Feb 7 16:09:19 2022 +0600
+
+    fetching data
+
+[33mcommit caf37ecaac175bd35aa2371f12e172b463df9d6c[m
+Author: RaihanSabique <htraihan@gmail.com>
+Date:   Mon Feb 7 16:00:53 2022 +0600
+
+    excle to ecomdb table sample
+
+[33mcommit 3d6ca3a40f4ac0bfcbc10012648f0012c047df93[m
+Author: RaihanSabique <htraihan@gmail.com>
+Date:   Sun Feb 6 10:25:02 2022 +0600
+
+    e-commerce data loading using notebook
+
+[33mcommit bb526e37656f610803ab6482f4e7713d4030ab9b[m
+Author: RaihanSabique <htraihan@gmail.com>
+Date:   Sun Feb 6 09:46:21 2022 +0600
+
+    Dev branch alter
+
+[33mcommit 4160e3aed5d3bb4989d85f2713b9644392eafed3[m[33m ([m[1;31morigin/dev[m[33m)[m
+Author: RaihanSabique <htraihan@gmail.com>
+Date:   Sun Feb 6 09:41:05 2022 +0600
+
+    Change in dev branch
+
+[33mcommit b40eac46da8980178bb2f9f08cd325defe0c8922[m
+Author: RaihanSabique <htraihan@gmail.com>
+Date:   Sun Feb 6 09:37:57 2022 +0600
+
+    .gitignore added
+
+[33mcommit 85ff9d413740def5174297b0f022f3226109351a[m
+Author: RaihanSabique <htraihan@gmail.com>
+Date:   Sun Feb 6 09:31:27 2022 +0600
+
+    a simple change
+
+[33mcommit c163ee75718721d3a62f87f52b9d8c8fec69e20c[m
+Author: RaihanSabique <htraihan@gmail.com>
+Date:   Wed Feb 2 07:46:29 2022 +0600
+
+    test file added for dir structure
+
+[33mcommit 57570905621a5dfe57cab7ba185a043b891ee772[m
+Author: RaihanSabique <htraihan@gmail.com>
+Date:   Wed Feb 2 07:40:06 2022 +0600
+
+    Structure and instructions
