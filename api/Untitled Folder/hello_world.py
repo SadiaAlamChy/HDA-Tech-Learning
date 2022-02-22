@@ -9,4 +9,4 @@ def hello_world():
 
 
 
-# venv\Scripts\activate
+# venv\Scripts\activate..
