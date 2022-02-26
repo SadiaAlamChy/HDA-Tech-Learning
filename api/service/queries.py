@@ -1,14 +1,16 @@
-import json
-
 from flask import jsonify, request
 from flask.views import MethodView
+
 from controller.q1 import Query1
+from controller.q10 import Query10
 from controller.q2 import Query2
 from controller.q3 import Query3
 from controller.q4 import Query4
 from controller.q5 import Query5
 from controller.q6 import Query6
 from controller.q7 import Query7
+from controller.q8 import Query8
+from controller.q9 import Query9
 
 
 class Query1API(MethodView):
@@ -74,33 +76,29 @@ class Query7API(MethodView):
         result = self.q.execute()
         return jsonify(result)
 
-    # def get(self):
-    #     result = self.q.execute()
-    #     return jsonify(result)
-#
-#
-# class Query8API(MethodView):
-#     def __init__(self):
-#         self.q1 = Query1()
-#
-#     def get(self):
-#         result = self.q1.execute()
-#         return jsonify(result)
-#
-#
-# class Query9API(MethodView):
-#     def __init__(self):
-#         self.q1 = Query1()
-#
-#     def get(self):
-#         result = self.q1.execute()
-#         return jsonify(result)
-#
-#
-# class Query10API(MethodView):
-#     def __init__(self):
-#         self.q1 = Query1()
-#
-#     def get(self):
-#         result = self.q1.execute()
-#         return jsonify(result)
+
+class Query8API(MethodView):
+    def __init__(self):
+        self.q = Query8()
+
+    def get(self):
+        result = self.q.execute()
+        return jsonify(result)
+
+
+class Query9API(MethodView):
+    def __init__(self):
+        self.q = Query9()
+
+    def get(self):
+        result = self.q.execute()
+        return jsonify(result)
+
+
+class Query10API(MethodView):
+    def __init__(self):
+        self.q = Query10()
+
+    def get(self):
+        result = self.q.execute()
+        return jsonify(result)
