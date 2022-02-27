@@ -4,8 +4,10 @@ from flask import Flask, jsonify, request
 from router import query_api
 
 app = Flask(__name__)
-app.run(host='localhost', port=5000)
-app.run(debug=True)
+
+
+# app.run(host='localhost', port=5000)
+# app.run(debug=True)
 # toolbar = DebugToolbarExtension(app)
 
 
@@ -25,3 +27,6 @@ def greetings_customized():
 # How blueprint work??
 
 app.register_blueprint(query_api, url_prefix='/api/')
+
+if __name__ == '__main__':
+    app.run(host='localhost', port=5000, debug=True)

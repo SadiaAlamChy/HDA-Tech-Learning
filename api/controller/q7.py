@@ -21,4 +21,5 @@ class Query7:
         cur.execute(query)
         result = cur.fetchall()
         pd_data = pd.DataFrame(list(result), columns=['Items'])
-        return pd_data.to_dict()
+        print(pd_data)
+        return {"items": pd_data['Items'].tolist()}

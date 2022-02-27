@@ -18,8 +18,8 @@ class Query10:
                 "order by s.store_key, t.month"
         cur.execute(query)
         result = cur.fetchall()
-        pd_data = pd.DataFrame(list(result), columns=['Store', 'Month', 'Avg. Sales'])
-        pd_data['Avg. Sales'] = pd_data['Avg. Sales'].astype('float64')
+        pd_data = pd.DataFrame(list(result), columns=['Store', 'Month', 'Avg'])
+        pd_data['Avg'] = pd_data['Avg'].astype('float64')
         return pd_data.to_dict(orient='records')
 
 
