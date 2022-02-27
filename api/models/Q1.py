@@ -8,15 +8,14 @@ class Query1:
         print(" constructor called")
 
     def execute(self):
-        select_stmt = " SELECT sr.division ,sr.district,tim.month, tim.year, SUM(fact.total_price) " \
+        select_stmt = " SELECT sr.division, SUM(fact.total_price) " \
                       " From ecomdb_star_schema.fact_table fact " \
-                      " JOIN ecomdb_star_schema.store_dim sr on sr.store_key=fact.store_key " \
-                      " JOIN ecomdb_star_schema.time_dim tim on tim.time_key=fact.time_key " \
-                      " GROUP BY (sr.division,sr.district,tim.month, tim.year) " \
+                      " JOIN ecomdb_star_schema.store_dim sr on sr.store_key=fact.store_key "\
+                      " GROUP BY (sr.division) " \
                       " ORDER BY sr.division"
 
         records = PostgresConnection.retrive_data_from_table(select_stmt)
-        df = pd.DataFrame(list(records), columns=['division', 'district', 'month', 'year', 'total_sales'])
+        df = pd.DataFrame(list(records), columns=['division', 'total_sales'])
         return df.to_dict(orient='records')
 
 

@@ -1,5 +1,4 @@
-from flask import  Flask, jsonify, request
-# from api.controllers.Q1 import Query1API
+from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
@@ -23,10 +22,8 @@ def greetings_customized():
         return jsonify({"message": "Get... "})
 
 
-# app.add_url_rule('/api/q1', view_func=Query1API.as_view('Get division wise total sale'))
 from router import query_api
 app.register_blueprint(query_api, url_prefix='/api/')
-
 
 if __name__ == '__main__':
     app.run(port=5000)
