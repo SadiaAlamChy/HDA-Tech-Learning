@@ -66,14 +66,16 @@ class Query6API(MethodView):
         return jsonify(result)
 
 class Query7API(MethodView):
-    def __init__(self):
-        self.q7 = Query7(days=0)
+    # def __init__(self):
+    #     self.q7 = Query7(days=0)
 
     def post(self):
-        self.q7.days = request.json['days']
+        days = request.json['days']
+        self.q7 = Query7(days)
         result = self.q7.execute() ## Dataframe
         # print(jsonify(result))
         return jsonify(result)
+
 
 class Query8API(MethodView):
     def __init__(self):

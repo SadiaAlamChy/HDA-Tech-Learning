@@ -11,4 +11,4 @@ class PostgresConnection(object):
     def getConnection(self):
         print("successfully connected to database")
         return self.connection
-conn = PostgresConnection().getConnection()
+#conn = PostgresConnection().getConnection()
