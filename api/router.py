@@ -4,6 +4,9 @@ from services.q3 import Query3API
 from services.q4 import Query4API
 from services.q5 import Query5API
 from services.q6 import Query6API
+from services.q7 import Query7API
+from services.q10 import Query10API
+
 
 
 from flask import Blueprint
@@ -18,3 +21,5 @@ query_api.add_url_rule("/q3", view_func=Query3API.as_view("Query 3"))
 query_api.add_url_rule("/q4", view_func=Query4API.as_view("Query 4"))
 query_api.add_url_rule("/q5", view_func=Query5API.as_view("Query 5"))
 query_api.add_url_rule("/q6", view_func=Query6API.as_view("Query 6"))
+query_api.add_url_rule("/q7", view_func=Query7API.as_view("Query 7"))
+query_api.add_url_rule("/q10", view_func=Query10API.as_view("Query 10"))
