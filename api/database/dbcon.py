@@ -1,6 +1,5 @@
 import psycopg2
 
-
 class PostgresConnection(object):
     def __init__(self):
         self.connection = psycopg2.connect(database="ecomdb",
