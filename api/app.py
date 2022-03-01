@@ -1,44 +1,21 @@
-from flask import Flask, render_template, request, url_for, redirect
-import os
-import psycopg2
+from flask import Flask, jsonify, request
+app=Flask(__name__)
 
-app = Flask(__name__)
+@app.route("/greetings", methods=['GET'])
+def greetings():
+    return jsonify({"msg" :"Hello Interns!!"})
 
-def get_db_connection():
-    conn = psycopg2.connect(host='localhost',
-                            database='flask_db',
-                            user='postgres',
-                            password='afra1234')
-    return conn
+@app.route("/greetings/customized", methods=['POST'])
+def greetings_customized():
+    data = {}
+    data['name'] = request.json['name']
+    return jsonify({"msg" :"Hello "+ data['name']})
 
+# from api.services.q1 import Query1API
+# app.add_url_rule("/api/q1", view_func=Query1API.as_view("Get division wise total sales"))
+### How blueprint work??
+from router import query_api
+app.register_blueprint(query_api, url_prefix='/api/')
 
-@app.route('/')
-def index():
-    conn = get_db_connection()
-    cur = conn.cursor()
-    cur.execute('SELECT * FROM books;')
-    books = cur.fetchall()
-    cur.close()
-    conn.close()
-    return render_template('index.html', books=books)
-
-
-@app.route('/create/', methods=('GET', 'POST'))
-def create():
-    if request.method == 'POST':
-        title = request.form['title']
-        author = request.form['author']
-        pages_num = int(request.form['pages_num'])
-        review = request.form['review']
-
-        conn = get_db_connection()
-        cur = conn.cursor()
-        cur.execute('INSERT INTO books (title, author, pages_num, review)'
-                    'VALUES (%s, %s, %s, %s)',
-                    (title, author, pages_num, review))
-        conn.commit()
-        cur.close()
-        conn.close()
-        return redirect(url_for('index'))
-
-    return render_template('create.html')
+if __name__ == '__main__':
+    app.run(host='localhost', port=5000)
