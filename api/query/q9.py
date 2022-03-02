@@ -18,9 +18,14 @@ class Query9:
         itemsdiv = cur.fetchall()
         idiv = pd.DataFrame(list(itemsdiv), columns=['Item', 'Division', 'Sales'])
         idiv = idiv.dropna()
-        idiv.set_index('Item', inplace=True)
+        #idiv.set_index('Item', inplace=True)
         # print(pd_data)
-        return {"sales":idiv.to_dict(orient='records')}
+        j = (idiv.groupby(['Item'])
+             .apply(lambda x: x[['Division', 'Sales']].to_dict('records'))
+             .reset_index()
+             .rename(columns={0: 'Sales'})
+             .to_json(orient='records'))
+        return eval(j)
         #return idiv.to_dict(orient='records')
 
 if __name__ == '__main__':

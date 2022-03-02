@@ -17,9 +17,15 @@ class Query10:
         cur.execute(select_avg)
         avg = cur.fetchall()
         avgmon = pd.DataFrame(list(avg), columns=['store_id', 'month', 'average_sales'])
+        avgmon = avgmon.dropna()
         # print(pd_data)
-        avgmon.set_index('store_id', inplace=True)
-        return {"sales":avgmon.to_dict(orient='records')}
+        #avgmon.set_index('store_id', inplace=True)
+        v = (avgmon.groupby(['store_id'])
+             .apply(lambda x: x[['month', 'average_sales']].to_dict('records'))
+             .reset_index()
+             .rename(columns={0: 'Sales'})
+             .to_json(orient='records'))
+        return eval(v)
         #return avgmon.to_dict(orient='records')
 
 if __name__ == '__main__':

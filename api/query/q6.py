@@ -20,9 +20,14 @@ class Query6:
         top3 = top3.dropna()
         top3 = top3.groupby('store_id').head(3)
         top3.pop('quantity')
-        top3.set_index('store_id', inplace=True)
+        #top3.set_index('store_id', inplace=True)
         # print(pd_data)
-        return {top3.columns.get_loc('store_id'):top3['item'].to_list()}
+        x = (top3.groupby(['store_id'])
+             .apply(lambda x: x[['item']].to_dict('records'))
+             .reset_index()
+             .rename(columns={0: 'items'})
+             .to_json(orient='records'))
+        return eval(x)
        # return top3.to_dict(orient='records')
 
 if __name__ == '__main__':
