@@ -1,6 +1,7 @@
 from flask import jsonify
 from flask.views import MethodView
-from querycontroller.q1 import Query1
+from query.q1 import Query1
+
 
 class Query1API(MethodView):
     def __init__(self):
@@ -8,7 +9,7 @@ class Query1API(MethodView):
 
     def get(self):
         '''
-        Get the data of querycontroller 1
+        Get the data of query 1
         :return: [{
                   ‘division’: “Dhaka”,
                   'total_sales’: 1000
@@ -19,10 +20,9 @@ class Query1API(MethodView):
                  },....
                 ]
         '''
-        result = self.q1.execute() ## Dataframe
+        result = self.q1.execute()  ## Dataframe
         # print(jsonify(result))
         return jsonify(result)
 
     # def post(self):
-
     # def delete(self):

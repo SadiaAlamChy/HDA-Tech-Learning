@@ -15,7 +15,7 @@ def get_db_connection():
 @app.route('/')
 def index():
     conn = get_db_connection()
-    cur = conn.cursor()
+    cur = conn
     cur.execute('SELECT * FROM books;')
     books = cur.fetchall()
     cur.close()
@@ -32,7 +32,7 @@ def create():
         review = request.form['review']
 
         conn = get_db_connection()
-        cur = conn.cursor()
+        cur = conn
         cur.execute('INSERT INTO books (title, author, pages_num, review)'
                     'VALUES (%s, %s, %s, %s)',
                     (title, author, pages_num, review))

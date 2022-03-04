@@ -1,25 +1,26 @@
 from flask import jsonify
 from flask.views import MethodView
-from querycontroller.q2 import Query2
+from query.q2 import Query2
+
 
 class Query2API(MethodView):
     def __init__(self):
-        self.q1 = Query2()
+        self.q2 = Query2()
 
     def get(self):
         '''
-        Get the data of querycontroller 1
+        Get the data of query 1
         :return: [{
-                  ‘division’: “Dhaka”,
-                  'total_sales’: 1000
+                  ‘trans_type’: “Cash”,
+                  ‘total_sales’: 1000
                   },
                  {
-                  ‘division’: “Rangpur”,
+                  ‘trans_type’: “Mobile”,
                   ‘total_sales’: 1000
                  },....
                 ]
         '''
-        result = self.q1.execute() ## Dataframe
+        result = self.q2.execute()  ## Dataframe
         # print(jsonify(result))
         return jsonify(result)
 

@@ -9,7 +9,7 @@ conn = psycopg2.connect(
     password='afra1234')
 
 # Open a cursor to perform database operations
-cur = conn.cursor()
+cur = conn
 
 # Execute a command: this creates a new table
 cur.execute('DROP TABLE IF EXISTS books;')
