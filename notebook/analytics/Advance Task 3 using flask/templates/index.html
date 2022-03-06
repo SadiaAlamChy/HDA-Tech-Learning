@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<!-- CSS  -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<link href="static/Style.css" rel="stylesheet">
+
+
+</head>
+<body>
+    <section style="text-align: center;">
+        <div style="height: 100px;"></div>
+        <form method="POST" action="/index">
+            <input style="width: 20%;" type="number" id="Item" name="Item" cols="5" rows="10" class="form-control" required="true" placeholder="Enter Item key"> <br>
+            <br>
+            <input style="width: 20%;" type="number" id="Month" name="Month" cols="5" rows="10" class="form-control" required="true" placeholder="Enter Month"><br>
+            <br> 
+            <input style="width: 20%;" type="number" id="Year" name="Year" cols="5" rows="10" class="form-control" required="true" placeholder="Enter Year"><br>
+            <br>
+            <button class="btn btn-small waves-effect waves-light purple lighten-1" type="submit">Total Sale Price</button>
+        </form> <br>
+        <!-- <p>{{total_sale_price}}</p> -->
+        <div style="text-align: center; padding: 10px; background-color: rgb(114, 113, 113); margin-left: 15%; width: 70%;" class="container white-text">
+            <h7>Using Extreme Gradient Boosting(XGB) Regressor Model Total Sale Price: </h7>
+            <h5><span style="font-weight: bolder ;color:#0c0c0c;">{{ total_sale_price }} </span></h5>
+        </div>
+
+
+
+</section>
+</body>
+</html>
