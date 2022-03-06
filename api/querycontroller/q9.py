@@ -23,7 +23,14 @@ class Query9:
         pd_data['total_sales_price_for_each_item'] = pd_data['total_sales_price_for_each_item'].astype('float64')
         pd_data = pd_data.dropna()
         # print(pd_data)
-        return pd_data.to_dict(orient='records')
+        x = (pd_data.groupby(['item_name'])
+             .apply(lambda x: x[['division', 'total_sales_price_for_each_item']].to_dict('records'))
+             .reset_index()
+             .rename(columns={0: 'Sales'})
+             .to_json(orient='records'))
+        return eval(x)
+
+        # return pd_data.to_dict(orient='records')
 
 if __name__ == '__main__':
     q9 = Query9()

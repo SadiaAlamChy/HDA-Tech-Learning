@@ -1,6 +1,7 @@
 # from api.database.dbcon import PostgresConnection
 # import database.dbcon
 # from database import dbcon
+from sqlalchemy import column
 from database.dbcon import PostgresConnection
 import pandas as pd
 class Query8:
@@ -26,6 +27,7 @@ class Query8:
         pd_data = pd_data.dropna()
         pd_data = pd_data.set_index('quarter').groupby("item_name")['minimum_sales_quantity_for_each_item'].nsmallest(1).reset_index()
         # print(pd_data)
+        pd_data = pd_data.drop(columns='minimum_sales_quantity_for_each_item', axis=1)
         return pd_data.to_dict(orient='records')
 
 if __name__ == '__main__':

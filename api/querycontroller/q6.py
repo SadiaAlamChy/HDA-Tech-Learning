@@ -24,9 +24,20 @@ class Query6:
         pd_data = pd_data.dropna()
         pd_data = pd_data.set_index('item_name').groupby("store_key")['quantity_sales_for_each_item'].nlargest(3).reset_index()
         # print(pd_data)
-        return pd_data.to_dict(orient='records')
+        # drop the quantity column
+        pd_data.drop(columns='quantity_sales_for_each_item', axis=1, inplace=True)
+        # organize the output
+        x = (pd_data.groupby(['store_key'])
+             .apply(lambda x: x[['item_name']].to_dict('records'))
+             .reset_index()
+             .rename(columns={0: 'items'})
+             .to_json(orient='records'))
+
+        # return pd_data.to_dict(orient='records')
+        return eval(x)
+
 
 if __name__ == '__main__':
-    q1 = Query1()
-    data = q1.execute()
+    q6 = Query6()
+    data = q6.execute()
     print(data)
