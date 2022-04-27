@@ -1,4 +1,4 @@
-from api.database.dbcon import PostgresConnection
+from database.dbcon import PostgresConnection
 import pandas as pd
 class Query1:
     def __init__(self):

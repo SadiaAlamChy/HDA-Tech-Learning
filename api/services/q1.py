@@ -1,6 +1,6 @@
 from flask import jsonify
 from flask.views import MethodView
-from api.querycontroller.q1 import Query1
+from querycontroller.q1 import Query1
 
 class Query1API(MethodView):
     def __init__(self):

@@ -1,0 +1,19 @@
+<!--<p>dashboard-home works!</p>-->
+<!--<li *ngFor="let d of q1Data">-->
+<!--  <p>{{d['division']}}: {{d['sales']}}</p>-->
+<!--</li>-->
+<div>
+  <h1 class="justify-content-center">Query-1: Division wise total sales</h1>
+</div>
+<div class="chart-wrapper">
+  <canvas baseChart
+          [data]="pieChartData"
+          [labels]="pieChartLabels"
+          [colors]="pieChartColors"
+          [chartType]="pieChartType"
+          [options]="pieChartOptions"
+          [plugins]="pieChartPlugins"
+          [legend]="pieChartLegend">
+  </canvas>
+</div>
+

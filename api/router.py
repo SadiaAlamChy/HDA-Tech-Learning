@@ -1,4 +1,4 @@
-from api.services.q1 import Query1API
+from services.q1 import Query1API
 from flask import Blueprint
 # from flask_cors import CORS
 
